@@ -1,0 +1,3 @@
+$os = Get-WmiObject -Class win32_operatingsystem
+$os.ConvertToDateTime($os.LastBootUpTime)
+(get-date) - $os.ConvertToDateTime($os.LastBootUpTime)
